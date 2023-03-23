@@ -16,8 +16,8 @@ print(f"This token '{token}' expires {token.expiration}")
 datastore = eumdac.DataStore(token)
 datastore.collections
 
-""" for collection in datastore.collections:
-    print(f"{collection} - {collection.title}") """
+for collection in datastore.collections:
+    print(f"{collection} - {collection.title}")
 
 original_stdout = sys.stdout 	
 
