@@ -8,8 +8,13 @@ import requests
 #url = "https://api.ims.gov.il/v1/envista/stations/85/data/daily"
 
 #! Bet-Dagan station id is 85; the following request is data from station-id 85 for the 01-9-21
-url = "https://api.ims.gov.il/v1/envista/stations/85/data?from=2021/09/01&to=2021/09/02"
+#url = "https://api.ims.gov.il/v1/envista/stations/85/data?from=2021/09/01&to=2021/09/02"
 
+#! Bet-Dagan station id is 85; 'Global rad' is channel 7; the following request is daily global-rad from Bet-Dagan 
+url = "https://api.ims.gov.il/v1/envista/stations/85/data/7/daily"
+
+
+#this is the token received via mail on 06/07/23
 headers = {"Authorization": "ApiToken f058958a-d8bd-47cc-95d7-7ecf98610e47"}
 
 response = requests.request("GET", url, headers=headers)
@@ -29,6 +34,9 @@ for item in sorted_data:
 
 
 #! print aggregated hourly data per day
+#! IMPORTANT:
+#!  According to the IMS, in order to get the accumulated radiation per day
+#!  need to divide the sum off all reade by 6 !!! 
 hourly_grad_sum = {}  # Dictionary to store aggregated 'Grad' values for each hour
 
 for entry in data['data']:
