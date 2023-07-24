@@ -6,9 +6,6 @@ import csv
 #! the following request is a list of all stations
 #url = "https://api.ims.gov.il/v1/Envista/stations"
 
-#! Bet-Dagan RAD station id is 85; the following request is daily data from station-id 85 (same day)
-#url = "https://api.ims.gov.il/v1/envista/stations/85/data/daily"
-
 #! Bet-Dagan RAD station id is 85; the following request is data from station-id 85 between dates
 url = "https://api.ims.gov.il/v1/envista/stations/85/data?from=2021/09/01&to=2021/09/02"
 
@@ -16,7 +13,10 @@ url = "https://api.ims.gov.il/v1/envista/stations/85/data?from=2021/09/01&to=202
 #url = "https://api.ims.gov.il/v1/envista/stations/85/data/daily/2021/09/01"
 
 #! Bet-Dagan RAD station id is 85; 'Global rad' is channel 7; the following request is daily global-rad from Bet-Dagan 
-#url = "https://api.ims.gov.il/v1/envista/stations/85/data/7/daily"
+#url = "https://api.ims.gov.il/v1/envista/stations/85/data/7/daily/2023/07/24"
+
+#! Bet-Dagan RAD station id is 85; 'Global rad' is channel 7; the following request is the latest read
+#url = https://api.ims.gov.il/v1/envista/stations/85/data/7/latest
 
 #! Bet-Dagan station id for temp is 54; Ground temp (TG) is channel 11; the following request is daily ground temp from Bet-Dagan
 #url = "https://api.ims.gov.il/v1/envista/stations/54/data/11/daily"
